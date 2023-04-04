@@ -48,3 +48,22 @@ git push -u origin main
 
 ```
 
+First steps
+
+- Run your package manager install on your local environment (we are using npm here)
+- Add yarn 
+
+~~~
+
+npm install yarn
+
+~~~
+
+
+- Add parcel
+
+~~~
+
+yarn add parcel
+
+~~~
