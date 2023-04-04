@@ -83,11 +83,17 @@ yarn add @parcel/transformer-sass
 ## Code Structure and Abstraction
 
 └─.parcel-cache
+
 └─css
+
 └─dist
+
 └─js
+
 └─node-modules
+
 └─scss
+
 └─src
 
 Package specific files for this boilerplate
