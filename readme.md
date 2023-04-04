@@ -67,3 +67,34 @@ npm install yarn
 yarn add parcel
 
 ~~~
+
+- If you get a transformer sass error, update the SCSS transformer-sass dependency (with yarn or pkg manager):
+
+~~~
+
+yarn add @parcel/transformer-sass
+
+~~~
+
+- A successful build should give you a build time and cached files
+
+- Initiate yarn start command in the terminal. This should open and render your skeleton template in the default browser.
+
+## Code Structure and Abstraction
+
+└─.parcel-cache
+└─css
+└─dist
+└─js
+└─node-modules
+└─scss
+└─src
+
+Package specific files for this boilerplate
+
+- .gitignore
+- action.yml
+- package.json
+- yarn.lock
+- .postcssrc
+- cssnano.config.js
