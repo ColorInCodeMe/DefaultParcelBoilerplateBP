@@ -1,3 +1,15 @@
 node_modules
 assets
 working-files
+.parcel-cache
+.parcel-cache/lock.mdb
+.parcel-cache/data.mdb
+.parcel-cache/3af2501f2918feee
+.parcel-cache/5711a0b7a06ed2e3.txt
+.parcel-cache/5d2d7a2218c291e7
+.parcel-cache/aa73ced89014d4ef
+dist/index.*.css
+.gitignore
+package-lock.json
+dist/index.*.html
+s
