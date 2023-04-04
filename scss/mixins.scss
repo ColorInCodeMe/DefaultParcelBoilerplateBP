@@ -1,0 +1,67 @@
+$breakpoints: ( 
+    "phone" : 415px, 
+    "tablet-small": 640px, 
+    "tablet" : 768px, 
+    "tablet-wide" : 1024px, 
+    "desktop" : 1248px, 
+    "ultra-wide": 2560px);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type==max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// example use 
+// .tester {
+//   border:2px dashed purple;
+//   @include mq(phone){
+//     border:2px solid red;
+//   }  
+//     @include mq(tablet-small){
+//     border:2px solid black;
+//   }  
+//     @include mq(tablet){
+//     border:2px solid orange;
+//   }  
+//     @include mq(tablet-wide){
+//     border:2px solid blue;
+//   }  
+//       @include mq(desktop){
+//     border:2px solid yellow;
+//   }  
+//       @include mq(ultra-wide){
+//     border:2px solid green;
+//   }  
+// }
+
+@mixin reset--list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// example of vendor prefix mixin
+// * {
+//   @include vendor--prefix('box-sizing', 'border-box');
+// }
+@mixin vendor--prefix($name, $value) {
+    @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+        #{$vendor}#{$name}: #{$value};
+    }
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
+  
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+  }

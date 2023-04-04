@@ -1,0 +1,31 @@
+{
+    "name": "kj-boilerplate",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "version": "1.0.0",
+    "source": "src/index.html",
+    "web": "dist/index.html",
+    "license": "private",
+    "private": true,
+    "type": "module",
+    "targets": {
+        "web": {
+            "context": "browser",
+            "publicUrl": "./"
+        }
+    },
+    "scripts": {
+        "watch": "parcel watch",
+        "start": "parcel ./src/index.html --target web --open",
+        "build": "parcel build ./src/index.html --target web"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.8.2",
+        "parcel": "latest",
+        "typescript": "^4.9.4"
+    },
+    "dependencies": {
+        "@parcel/transformer-postcss": "^2.8.2",
+        "autoprefixer": "^10.4.13",
+        "yarn": "^1.22.19"
+    }
+}
