@@ -12,4 +12,3 @@ dist/index.*.css
 .gitignore
 package-lock.json
 dist/index.*.html
-s
